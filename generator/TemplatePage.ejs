@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <% dependencies.forEach( dep => { %>
+            <<%= dep.name %> />
+        <% }) %>
+    </div>
+</template>
+
+<script>
+    
+    <% dependencies.forEach( dep => { %>
+        import <%= dep.name %> from '~/output/<%= dep.path %>'    
+    <% }) %>
+
+    export default {
+        name: '<%= componentName %>',
+        components: {
+            <%= dependencies.map(dep => dep.name).join(", "); %>
+        }
+    }
+</script>
