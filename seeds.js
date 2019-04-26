@@ -15,24 +15,14 @@ export default {
   components: [
     // 10 per page
     'UserCreateForm',
-    'UserCreateFormButtonSave',
-    'UserCreateFormButtonCancel',
-    'UserCreateFormButtonDialog',
-    'UserCreateFormButtonDialogCancelButton',
-    'UserCreateFormButtonDialogSaveButton',
+    'UserCreateFormSaveButton',
+    'UserCreateFormCancelButton',
     'UserUpdateForm',
-    'UserUpdateFormButtonSave',
-    'UserUpdateFormButtonCancel',
-    'UserUpdateFormButtonDialog',
-    'UserUpdateFormButtonDialogCancelButton',
-    'UserUpdateFormButtonDialogSaveButton',
-    'DetailsIndex',
-    'DetailsIndexTable',
-    'DetailsIndexTableItem',
-    'DetailsIndexTableItemsActions',
-    'DetailsIndexTableItemsActionsButtons',
-    'DetailsIndexTableItemEditButton',
-    'DetailsIndexTableItemDeleteButton',
-    'DetailsIndexTableItemSaveButton'
+    'UserUpdateFormSaveButton',
+    'UserUpdateFormCancelButton',
+    'DetailsCreateForm',
+    'DetailsCreateFormSaveButton',
+    'DetailsCreateFormCancelButton',
+    'DetailsCreateFormDismissButton'
   ]
 }
