@@ -23,15 +23,21 @@
       <v-btn color="warning">Warning</v-btn>
       <v-btn color="info">Info</v-btn>
     </div>
+    <ResidentUserCreateForm/>
+    <TemplateButton>CLICICCICI</TemplateButton>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import ResidentUserCreateForm from '~/components/ResidentUserCreateForm.vue'
+import TemplateButton from '~/components/TemplateButton.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    ResidentUserCreateForm,
+    TemplateButton
   }
 }
 </script>
