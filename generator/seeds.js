@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require('path')
 const templateForm = path.resolve(__dirname, 'TemplateForm.ejs')
 const templateButton = path.resolve(__dirname, 'TemplateButton.ejs')
-const faker = require('faker');
+const faker = require('faker')
 
-const NUMBER_OF_PAGES = 20
+const NUMBER_OF_PAGES = 20 // 20 pages, produce 2000 components + 220 pages = 2220 | 30 pages, produce 3000 + 320 pages = 3320
 
 const randomButtonData = () => {
   const buttonClasses = ['success', 'error', 'warning', 'info']
@@ -11,7 +11,7 @@ const randomButtonData = () => {
     buttonText: `${faker.hacker.verb()} Button`,
     buttonClass: buttonClasses[Math.floor(Math.random() * buttonClasses.length)]
   }
-};
+}
 
 module.exports = {
   modules: [
@@ -27,37 +27,58 @@ module.exports = {
     'nurse'
   ],
   pages: (() => {
-    let words = new Set();
+    let words = new Set()
     while (words.size < NUMBER_OF_PAGES) {
       words.add(faker.lorem.word())
-    };
-    return Array.from(words);
+    }
+    return Array.from(words)
   })(),
   // we need to have 50 per module, add textX for rest pages | 500 page components so far
   components: {
     // 10 per page
-    'UserCreateForm': {
+    UserCreateForm: {
       template: templateForm,
       dependencies: {
-        'UserCreateFormSaveButton': { template: templateButton, data: randomButtonData },
-        'UserCreateFormCancelButton': { template: templateButton, data: randomButtonData },
+        UserCreateFormSaveButton: {
+          template: templateButton,
+          data: randomButtonData
+        },
+        UserCreateFormCancelButton: {
+          template: templateButton,
+          data: randomButtonData
+        }
       }
     },
 
-    'UserUpdateForm': {
+    UserUpdateForm: {
       template: templateForm,
       dependencies: {
-        'UserUpdateFormSaveButton': { template: templateButton, data: randomButtonData },
-        'UserUpdateFormCancelButton': { template: templateButton, data: randomButtonData },
+        UserUpdateFormSaveButton: {
+          template: templateButton,
+          data: randomButtonData
+        },
+        UserUpdateFormCancelButton: {
+          template: templateButton,
+          data: randomButtonData
+        }
       }
     },
 
-    'DetailsCreateForm': {
+    DetailsCreateForm: {
       template: templateForm,
       dependencies: {
-        'DetailsCreateFormSaveButton': { template: templateButton, data: randomButtonData },
-        'DetailsCreateFormCancelButton': { template: templateButton, data: randomButtonData },
-        'DetailsCreateFormDismissButton': { template: templateButton, data: randomButtonData },
+        DetailsCreateFormSaveButton: {
+          template: templateButton,
+          data: randomButtonData
+        },
+        DetailsCreateFormCancelButton: {
+          template: templateButton,
+          data: randomButtonData
+        },
+        DetailsCreateFormDismissButton: {
+          template: templateButton,
+          data: randomButtonData
+        }
       }
     }
   }

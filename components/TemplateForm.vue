@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseForm>
-            <BaseButton>Click here</BaseButton>
+      <BaseButton>Click here</BaseButton>
     </BaseForm>
   </div>
 </template>

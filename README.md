@@ -17,6 +17,12 @@ $ yarn start
 
 # generate static project
 $ yarn run generate
+
+# generate thousands components
+$ yarn generate:components
+
+# clean up thousands components
+$ yarn generate:cleanup
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
